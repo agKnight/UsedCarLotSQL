@@ -1,0 +1,111 @@
+12. Composite Tag Reference
+Documentation > JSF > JSF Tag Reference > Composite Tag Library
+
+Composite Tag Library
+
+Since JSF 2.0
+The composite tag library supports the definition and implementation of composite UI components based on the Facelets view declaration language (VDL).
+Tag Name	Description	Since
+composite:actionSource	 [ Documentation pending ]	
+composite:attribute	 [ Documentation pending ]	
+composite:editableValueHolder	 [ Documentation pending ]	
+composite:extension	 [ Documentation pending ]	
+composite:facet	 [ Documentation pending ]	
+composite:implementation	 [ Documentation pending ]	
+composite:insertChildren	 [ Documentation pending ]	
+composite:insertFacet	 [ Documentation pending ]	
+composite:interface	 [ Documentation pending ]	
+composite:renderFacet	 [ Documentation pending ]	
+composite:valueHolder	 [ Documentation pending ]	
+
+12. JSF Core Tag Reference
+Documentation > JSF > JSF Tag Reference > JSF Core Tag Library
+
+JSF Core Tag Library
+
+The JSF Core tag library contains general purpose tags for conversion, validation, Ajax, and other use cases.
+Tag Name	Description	Since
+f:actionListener	 The ActionListener tag registers a javax.faces.event.ActionListener instance with the component.	
+f:ajax	 JSF2 standardizes Asynchronous Javascript and XML (Ajax) functionality across JSF component libraries and introduces the f:ajax tag to provide Ajax capabilities in a standard way.	JSF 2.0
+
+f:attribute	 The Attribute tag is a name/value pair that sets the value of a named attribute on the component associated with the enclosing tag.
+	
+f:convertDateTime	 The ConvertDateTime tag is useful for converting a date into a human-readable format and supports a range of formatting options.
+	
+f:convertNumber	 The ConvertNumber tag registers a NumberConverter instance on the component associated with the enclosing tag.	
+
+f:converter	 The Converter tag registers a Converter instance on the component associated with the enclosing tag.	
+f:event	 [ Documentation pending ]	JSF 2.0
+f:facet	 The Facet tag registers a named facet on the component associated with the enclosing tag.	
+f:loadBundle	 The LoadBundle tag loads a resource bundle for the Locale of the current view and stores it as a Map in request scope.	
+
+f:metadata	 [ Documentation pending ]	JSF 2.0
+f:param	 The Param tag sets a parameter for the component associated with the enclosing tag.	
+f:phaseListener	 [ Documentation pending ]	JSF 2.0
+f:selectItem	 The SelectItem tag adds a child UISelectItem component to the component associated with the enclosing tag.	
+
+f:selectItems	 The SelectItems tag adds a child UISelectItems component to the component associated with enclosing tag.	
+f:setPropertyActionListener	 [ Documentation pending ]	
+
+f:subview	 The Subview tag creates a naming container (a container component with a unique identifier) that contains all JavaServer Faces core and custom tags on a nested page via "jsp:include" or any tag that dynamically includes another page from the same web application, such as JSTL's "c:import". The subview tag wraps JSF components contained in an included JSP or Facelets page that allows nested views.
+	
+f:validateBean	 [ Documentation pending ]	JSF 2.0
+
+12. JSF HTML Tag Reference
+Documentation > JSF > JSF Tag Reference > JSF HTML Tag Library
+
+JSF HTML Tag Library
+
+This tag library contains JavaServer Faces component tags for all UIComponent + HTML RenderKit Renderer combinations defined in the JavaServer Faces Specification.
+Tag Name	Description	Since
+h:body	 This tag renders an HTML body element.	JSF 2.0
+h:button	 [ Documentation pending ]	JSF 2.0
+h:column	 The column tag renders a single column of data within a data table component.	
+h:commandButton	 The commandButton tag renders an HTML submit button that can be associated with a backing bean or ActionListener class for event handling purposes.	
+h:commandLink	 The commandLink tag renders an HTML anchor tag that behaves like a form submit button and that can be associated with a backing bean or ActionListener class for event handling purposes.	
+h:dataTable	 The dataTable tag renders an HTML4 compliant table element that can be associated with a backing bean to obtain its data as well as for event handling purposes.	
+h:form	 The form tag renders an HTML form element.	
+h:graphicImage	 The graphicImage tag renders an HTML image tag.	
+h:head	 This tag renders an HTML head element.	JSF 2.0
+h:inputHidden	 The inputHidden tag renders an HTML input element of the type "hidden".	
+h:inputSecret	 The inputSecret tag renders an HTML input element of the type "password".	
+h:inputText	 The inputText tag renders an HTML input element of the type "text".	
+h:inputTextarea	 The inputTextarea tag renders an HTML "textarea" element.	
+h:link	 [ Documentation pending ]	JSF 2.0
+h:message	 The message tag renders a message for a specific component.	
+h:messages	 The messages tag renders all Faces messages for the current view.	
+h:outputFormat	 The outputFormat tag renders parameterized text and allows you to customize the appearance of this text using CSS styles.	
+h:outputLabel	 The outputLabel tag renders an HTML "label" element.	
+h:outputLink	 The outputLink tag renders an HTML anchor tag with an "href" attribute.	
+h:outputScript	 [ Documentation pending ]	JSF 2.0
+h:outputStylesheet	 [ Documentation pending ]	JSF 2.0
+h:outputText	 The outputText tag renders basic text on your JSF page.	
+h:panelGrid	 The h:panelGrid tag renders an HTML4 compliant table element.	
+h:panelGroup	 The panelGroup tag is a container component that renders its child components.	
+h:selectBooleanCheckbox	 The SelectBooleanCheckbox tag renders an HTML input element of the type "checkbox".	
+h:selectManyCheckbox	 The SelectManyCheckbox tag renders a list of HTML checkboxes.	
+h:selectManyListbox	 The SelectManyListbox tag renders an HTML "select" list of any size with the "multiple" attribute present.	
+h:selectManyMenu	 The SelectManyMenu tag renders an HTML "select" element with the "multiple" attribute present and the "size" attribute set to 1.	
+h:selectOneListbox	 The SelectOneListbox tag renders an HTML "select" element of any size without the "multiple" attribute.	
+h:selectOneMenu	 The SelectOneMenu tag renders an HTML "select" element with a "size" of 1 without the "multiple" attribute.	
+h:selectOneRadio	 The SelectOneRadio tag renders a table of HTML "input" elements of the type "radio".
+
+f:validateDoubleRange	 The ValidateDoubleRange tag registers a DoubleRangeValidator instance on the component associated with the enclosing tag.	
+
+f:validateLength	 The ValidateLength tag registers a LengthValidator instance on the component associated with the enclosing tag.	
+
+f:validateLongRange	 The ValidateLongRange tag registers a LongRangeValidator instance on the component associated with the enclosing tag.
+	
+f:validateRegex	 [ Documentation pending ]	JSF 2.0
+
+f:validateRequired	 [ Documentation pending ]	JSF 2.0
+
+f:validator	 The Validator tag registers a named Validator instance on the component associated with the enclosing tag.	
+
+f:valueChangeListener	 The ValueChangeListener tag registers a ValueChangeListener instance on the component associated with the enclosing tag.
+	
+f:verbatim	 The Verbatim tag creates an output component as a child of the component associated with the enclosing tag.	
+
+f:view	 The View tag is the container for all JavaServer Faces component tags used on a page.	
+
+f:viewParam	 [ Documentation pending ]	

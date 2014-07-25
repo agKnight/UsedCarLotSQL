@@ -1,0 +1,145 @@
+Java EE & Java Web Learning Trail
+
+A Java Web App generates interactive web pages containing various markup 
+languages and dynamic content.
+
+Comprised of web components suh as JavaServer Pages (JSP), servlets and 
+JavaBeans to modify and temporarly store data, interact with databases
+and web services, and render content in response to client requests.
+
+JavaServer Faces, provide libraries for templating pages and session management
+ad often promote code reuse.
+
+Java EE(Enterprise Edition) is a widely used platform cntaining a set of 
+coordinated technologies that significantly reduce the cost and complexity of 
+developing, deploying, and managing multi-tier, server centric applications.
+
+Java EE builds upon the Java SE platform and provides a set of APIs for developing
+and running portable, robust, scalable, reliable and secure server-side applications.
+
+Some of the fundamental components of Java EE include
+
+	- Enterprise JavaBeans (EJB): a managed, server-side component architecture used
+	  to encapsulate the business logic of an application. EJB technology enables rapid
+	  and simplified development of distributed, transactional, secure and portable
+	  applications based on Java technology.
+	  
+	- Java Persistence API (JPA): a framework that allows developers to manage data using
+	  object-relational mapping (ORM) in applications built on the java Platform.
+	  
+JavaScript and Ajax Development
+
+JavaSript is an OO scripting language primarily used in client side interfaces for web applications.
+Ajax is a web 2.0 technique that allows changes to occur in a web page without the need to a preform
+a pag refresh.  JavaScript toolkits can be leveraged to implement Ajax-enabled components and functionality
+in web pages.
+
+Introduction to developing Web Applications
+
+Create simple web application, deplot to server, and view its presentation in a browser.
+Use JSP to request information, then JavaBeans to persist the info during the HTTP session,
+and also retrieve the information for output to another JSP page.
+
+Software Resources
+
+NetBeans IDE 7.2 or higher / Java EE version
+JDK 7 or 8
+Glassfish Server OSE 4.x
+
+File --> New Project --> Java Web --> Web Applications --> next
+Name --> Project Location --> Server and Settings (Java EE and Glassfish 4) --> Finish
+
+Creating a Java Package and a Java Source File
+
+Projects windows --> right click (Source Packages Node) --> New --> Java Class
+Name --> Package Name (i.e org.mypackage.hello (prefix.package.app)) --> Finish
+
+A web app will always have a starting point and an ending point, and there will always be a pathway to the end.
+
+Introduction to Support for Java EE technology in NEtBEans IDE
+
+Annotations Instead of Deployment Descriptors
+
+The Java EE platform simplifies deployment by removing the need for deployment descriptors, except for the deployment 
+descriptor required by the servlet specification, the web.xml file. J2EE 1.4 deployment descriptors were often complex and it was easy to make mistakes in filling them out. Instead , the Java EE platform makes use of Annotations. Annotations are Java modifiers, similiar to public and private, that you specify in your code.i.e, the EJB3 specification, wich is a subset of the Java EE specification, defines annotations for the bean type, interface typ, resource references, transaction attributes, security and more. A similiar set of annotations is provided for web services by the JAX-WS 2.0 specification. Some annotations are used for generating artifacts. Other annotations are used for documenting your code. Still others provide enhanced services such as security or runtime- specific logic.
+
+The Java EE platform provides annotations for the following tasks, among others:
+	- Defining and using web services
+	- Developing EJB software applications
+	- Mapping Java Technology classes to XML
+	- Mapping Java technology classes to databases
+	- Mapping methods to operations
+	- Specifying external dependencies
+	- Specifying deployment information, including security attributes
+	
+Annotations are marked with a @ character.
+Example
+package mypackage;
+
+import javax.ejb.*;
+@Stateless()
+public class HelloWorldSessionBean implements mypackage.HelloWorldSessionLocal {
+
+}
+
+Code completition provides access to annotation attributes specific to the item under the cursor. when you press ctrl-space in the bracket of a @WebService() annotation, a list of available attributes appears.
+
+Each attribute has default values. Therefore, you do not need to specify any attributes unless you want to use a value other than the default value. In simple cases, the default value is sufficient, which means that you do not even need to provide attributes at all.
+
+EJB 3.0 API makes software development easier by reducing and simplifying the amount of work required from the developer. In other words, fewer classes and less code. 
+
+EJB 3.0 Features
+
+Fewer required classes and interfaces -- You no longer need home and object interfaces for EJB components because the containor is now responsible for exposing the neccessary methods. You need only supply a business interface. You can use Annotations to declare EJB components and the container will manage the transactions
+
+No More Deployment Descriptors -- You can use annotations directly in the class to tell the container about dependencies and configuration that you formerly defined in deployment descriptors. If there are no specific instructions, the container uses default rules to handle the most common situations
+
+Simple lookups -- The EJBContext enables you to lookup objects ain the JNDI name space directly un the class.
+
+Simplified object-relational mapping -- The new Java Persistence API makes object-relational mapping much simplier and transparent by allowing you to use annotations in POJOs to map Java objects to relational databases.
+
+in the IDE, you can code enterprse beans just as you would code other Java classes, using code completion and editor hints to implement the correct methods and keep the classes in synch with their interfaces. You do not need to use special commands and dialog bxs to generate things like business methods or web service operations, although the commands are still available to help aquaint you with the syntax of Java EE code.
+
+Use depenency Injection to Access Resources
+
+Dependency Injection enables an object to use anotations to requet external resources firectly. This results in cleaner code because you no longer need to clutter your code with resource creation and lookup code. You can use resource injection in EJB componetns, we containers and clients
+
+To request injection of a resource, a component users the @Resource annotation or, in the case of some specialized resources, the @EJB and @WebServiceRef annotations. 
+
+Resources that be injected include: 
+	- SessionContext object
+	- DataSources object
+	- EntityManager interface
+	- Other enterprise beans	
+	- Web Services
+	- Web services
+	- Message queues and topics
+	- Connection factories for resource adapters
+	
+In the IDe, the Source Editor provides full code completion for resource injecton annotation provided by th Java EE latform. In addition, theIDE automatically injects resources into your files when you run commands like Call EJB and Use Database.
+
+Java persistence API Model
+
+The java EE platform introduces the JPA. JPA can also be used outide of EJB components.
+
+JPA has the following key features
+
+	-Entities are POJOs -- Unlike EJB components that used container-managed persistence (CMP), entity objects using the new APIs are no longer components, and tey no longer need to be in an EJB module.
+	- Standardized object-relational mapping -- the new specification standarizes how object-relational mapping is handled, freeing the developer from learning vendor-specific strategies. The JPA uses annotations to specify object-relational mapping information, but still support XML descriptors.
+	- Named Queries -- A named query is now a static query expressed in metadata. The query can be either a JPA query or a native query. This makes reusing queries very simple.
+	- Simple packaging rules -- because entity beans are simple Java technology classes, they can be packaged virtually anywhere in a JAva EE applicaion.
+	- Detached entities -- Becuase entity beans are POJOs, they can be serialized and sent accross the network to a different address space and used in a persistence-unaware enviroment. As a result, you no longer need to use data transfer objects (DTOs)
+	EntityManager API -- application programmers now use a standard EntityManager API to perfom CRUD operations that involve entities.
+	
+The IDE provides tools to work with the new java persistence API. You can generate entity classes automatically from a database, or code entity classes by hand. The IDE also provides templates and graphic editors for creating and maintaining persistence units.
+
+Web Services
+
+In the Java EE platform, the use of Annotations has greatly improved and simplified web services support.
+
+
+
+
+
+
+
